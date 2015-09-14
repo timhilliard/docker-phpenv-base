@@ -14,6 +14,8 @@ PHPENV_ROOT=/usr/local/phpenv /tmp/phpenv/bin/phpenv-install.sh
 echo 'export PATH="/usr/local/phpenv/bin:$PATH"' >> /etc/profile.d/phpenv.sh
 echo 'eval "$(phpenv init -)"' >> /etc/profile.d/phpenv.sh
 git clone https://github.com/php-build/php-build.git /usr/local/phpenv/plugins/php-build
+git clone https://github.com/timhilliard/phpenv-major-version-switcher.git /usr/local/phpenv/plugins/phpenv-major-version-switcher
+/bin/bash --login -c 'phpenv rehash'
 
 apt-get clean
 apt-get purge
